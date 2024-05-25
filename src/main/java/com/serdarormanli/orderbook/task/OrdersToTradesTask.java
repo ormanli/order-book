@@ -6,6 +6,7 @@ import com.serdarormanli.orderbook.service.OrderBook;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
+import lombok.extern.java.Log;
 
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
+@Log
 @RequiredArgsConstructor
 public class OrdersToTradesTask implements Runnable {
 
@@ -40,7 +42,7 @@ public class OrdersToTradesTask implements Runnable {
                 this.addOrderAndWriteTrades(order);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            log.severe(e.getMessage());
         } finally {
             this.countDownLatch.countDown();
         }

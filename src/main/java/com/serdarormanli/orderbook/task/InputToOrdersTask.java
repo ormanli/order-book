@@ -4,11 +4,13 @@ import com.serdarormanli.orderbook.input.Parser;
 import com.serdarormanli.orderbook.model.Order;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 
 import java.io.InputStreamReader;
 import java.util.Queue;
 import java.util.concurrent.CountDownLatch;
 
+@Log
 @RequiredArgsConstructor
 public class InputToOrdersTask implements Runnable {
 
@@ -22,7 +24,7 @@ public class InputToOrdersTask implements Runnable {
         try {
             this.parser.parse(this.inputStreamReader, this.queue);
         } catch (Exception e) {
-            e.printStackTrace();
+            log.severe(e.getMessage());
         } finally {
             this.countDownLatch.countDown();
         }

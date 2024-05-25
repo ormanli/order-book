@@ -21,7 +21,7 @@ public class App {
 
     @SneakyThrows
     public static void main(String[] args) {
-        @Cleanup("shutdown") var executorService = Executors.newFixedThreadPool(2);
+        @Cleanup("shutdown") var executorService = Executors.newVirtualThreadPerTaskExecutor();
 
         @Cleanup var output = new OutputStreamWriter(System.out, Charset.defaultCharset());
         @Cleanup var input = new InputStreamReader(System.in, Charset.defaultCharset());

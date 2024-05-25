@@ -10,7 +10,7 @@ processing of a newly posted order, and happen immediately, which is known as â€
 
 ### Requirements ###
 
-* Java 19+
+* Java 22+
 * Maven 3
 
 ### Info ###

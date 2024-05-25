@@ -13,14 +13,14 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
         <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
-        <java.version>19</java.version>
-        <junit-jupiter-api.version>5.9.2</junit-jupiter-api.version>
+        <java.version>22</java.version>
+        <junit-jupiter-api.version>5.11.0-M2</junit-jupiter-api.version>
         <maven-surefire-plugin.version>3.0.0-M9</maven-surefire-plugin.version>
-        <lombok.version>1.18.26</lombok.version>
-        <assertj-core.version>3.24.2</assertj-core.version>
-        <commons-csv.version>1.10.0</commons-csv.version>
+        <lombok.version>1.18.32</lombok.version>
+        <assertj-core.version>3.25.3</assertj-core.version>
+        <commons-csv.version>1.11.0</commons-csv.version>
         <maven-shade-plugin.version>3.4.1</maven-shade-plugin.version>
-        <spotbugs-maven-plugin.version>4.7.2.1</spotbugs-maven-plugin.version>
+        <spotbugs-maven-plugin.version>4.7.3.4</spotbugs-maven-plugin.version>
         <maven-checkstyle-plugin.version>3.2.1</maven-checkstyle-plugin.version>
     </properties>
 
